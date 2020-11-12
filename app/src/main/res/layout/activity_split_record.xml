@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplitRecordActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="245dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/spr"
+        app:layout_constraintBottom_toTopOf="@+id/bt_ToFR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+    <Button
+        android:id="@+id/bt_ToPR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="36dp"
+        android:background="#2196F3"
+        android:text="투수 기록"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Splogout"
+        app:layout_constraintEnd_toStartOf="@+id/bt_ToFR"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_ToFR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="37dp"
+        android:background="#2196F3"
+        android:text="타자 기록"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Splogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_ToPR"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <Button
+        android:id="@+id/bt_Splogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:background="#2196F3"
+        android:text="로그아웃"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/bt_DRT"
+        app:layout_constraintStart_toStartOf="@+id/bt_DRT"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ToFR" />
+
+    <Button
+        android:id="@+id/bt_DRT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="125dp"
+        android:background="#2196F3"
+        android:text="메인메뉴"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Splogout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

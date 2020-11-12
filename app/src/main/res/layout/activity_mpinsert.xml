@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MPinsertActivity">
+
+    <Button
+        android:id="@+id/bt_Mpinsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="기록입력"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Mpmain"
+        app:layout_constraintStart_toEndOf="@+id/bt_Mpmain" />
+
+    <Button
+        android:id="@+id/bt_Mpmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginBottom="76dp"
+        android:text="메인메뉴"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_Mplogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:text="로그아웃"
+        app:layout_constraintStart_toEndOf="@+id/bt_Mpinsert"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Mpinsert" />
+
+    <EditText
+        android:id="@+id/et_MPGAMES"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="114dp"
+        android:hint="등판수"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_MPW"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="45dp"
+        android:hint="승"
+        app:layout_constraintBottom_toBottomOf="@+id/et_MPL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_MPGAMES" />
+
+    <EditText
+        android:id="@+id/et_MPL"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="45dp"
+        android:hint="패"
+        app:layout_constraintBottom_toBottomOf="@+id/et_MPIP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MPGAMES" />
+
+    <EditText
+        android:id="@+id/et_MPIP"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="249dp"
+        android:layout_marginBottom="249dp"
+        android:hint="이닝"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Mpinsert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_MPLR"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="47dp"
+        android:hint="자책점"
+        app:layout_constraintBottom_toTopOf="@+id/et_MPBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_MPIP" />
+
+    <EditText
+        android:id="@+id/et_MPBB"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="43dp"
+        android:hint="피볼넷"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_MPSO" />
+
+    <EditText
+        android:id="@+id/et_MPSO"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="45dp"
+        android:hint="탈삼진"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_MPH"
+        android:layout_width="164dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:hint="피안타"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MPBB" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

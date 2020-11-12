@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Application for all Baseball Player"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="11dp"
+        android:text="    ABP"
+        android:textAllCaps="true"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginBottom="50dp"
+        android:text="환영합니다"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/img_AMA"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/bt_logoutmain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="89dp"
+        android:background="#2196F3"
+        android:text="로그아웃"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_abpr" />
+
+    <ImageView
+        android:id="@+id/img_record"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/abpcute"
+        app:layout_constraintBottom_toTopOf="@+id/bt_abpr"
+        app:layout_constraintEnd_toStartOf="@+id/img_rf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_Ama" />
+
+    <ImageView
+        android:id="@+id/img_rf"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginRight="93dp"
+        android:layout_marginBottom="55dp"
+        android:src="@drawable/refi"
+        app:layout_constraintBottom_toBottomOf="@+id/bt_abpr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_record"
+        app:layout_constraintTop_toTopOf="@+id/bt_Ama" />
+
+    <Button
+        android:id="@+id/bt_abpr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="99dp"
+        android:layout_marginRight="99dp"
+        android:layout_marginBottom="37dp"
+        android:background="#2196F3"
+        android:text="심판기능"
+        android:textColor="#FAF8F8"
+        app:layout_constraintBottom_toTopOf="@+id/bt_logoutmain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_record"
+        app:layout_constraintTop_toBottomOf="@+id/img_record" />
+
+    <Button
+        android:id="@+id/bt_record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#2196F3"
+        android:text="기록실"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toStartOf="@+id/bt_abpr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_record" />
+
+    <ImageView
+        android:id="@+id/img_PRO"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="95dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginRight="29dp"
+        android:src="@drawable/kbologo2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_AMA"
+        app:layout_constraintEnd_toStartOf="@+id/img_AMA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_AMA" />
+
+    <Button
+        android:id="@+id/bt_Pro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:background="#2196F3"
+        android:text="프로야구"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Ama"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_PRO" />
+
+    <ImageView
+        android:id="@+id/img_AMA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/amamain"
+        app:layout_constraintBottom_toTopOf="@+id/bt_Ama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_PRO"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/bt_Ama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="7dp"
+        android:background="#2196F3"
+        android:text="아마야구"
+        android:textColor="#FAF8F9"
+        app:layout_constraintBottom_toTopOf="@+id/img_record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_Pro"
+        app:layout_constraintTop_toBottomOf="@+id/img_AMA" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

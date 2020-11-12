@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertActivity">
+
+
+    <Button
+
+        android:id="@+id/bt_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="160dp"
+        android:text="기록입력"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_MYTREEB" />
+
+
+
+    <Button
+        android:id="@+id/bt_InsertMM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="79dp"
+        android:text="메인메뉴"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bt_Insertlogout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYTREEB" />
+
+    <Button
+        android:id="@+id/bt_Insertlogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="로그아웃"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_InsertMM"
+        app:layout_constraintTop_toBottomOf="@+id/bt_test" />
+
+    <EditText
+        android:id="@+id/et_MYGAMES"
+        android:layout_width="165dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_height="0dp"
+        android:layout_marginTop="69dp"
+        android:hint="출장수"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYPA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_MYPA"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:hint="타석"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYGAMES" />
+
+    <EditText
+        android:id="@+id/et_MYAB"
+        android:layout_width="165dp"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_height="0dp"
+        android:hint="타수"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYH"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYPA" />
+
+    <EditText
+        android:id="@+id/et_MYH"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:hint="안타"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYTB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYAB" />
+
+    <EditText
+        android:id="@+id/et_MYTB"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:hint="2루타"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYHR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYH" />
+
+    <EditText
+        android:id="@+id/et_MYTREEB"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="102dp"
+        android:hint="삼루타"
+        app:layout_constraintBottom_toTopOf="@+id/bt_InsertMM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYSO" />
+
+    <EditText
+        android:id="@+id/et_MYHR"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:hint="홈런"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYBB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYTB" />
+
+    <EditText
+        android:id="@+id/et_MYBB"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:hint="볼넷"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYSO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYHR" />
+
+    <EditText
+        android:id="@+id/et_MYSO"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:layout_width="165dp"
+        android:layout_height="0dp"
+        android:hint="삼진"
+        app:layout_constraintBottom_toTopOf="@+id/et_MYTREEB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_MYBB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.abptest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".chartactivity"></activity>
+        <activity android:name=".MYRchart" />
+        <activity android:name=".MFchart" />
+        <activity android:name=".MPsalActivity" />
+        <activity android:name=".FPsalActivity" />
+        <activity android:name=".ShowMYPRecordActivity" />
+        <activity android:name=".SplitShowAcitivity" />
+        <activity android:name=".SplitRecordActivity" />
+        <activity android:name=".MPinsertActivity" />
+        <activity android:name=".RecordMainActivity" />
+        <activity android:name=".AmaMatchActivity" />
+        <activity android:name=".AmaPlyaerRequstActivity" />
+        <activity android:name=".AmaMarketActivity" />
+        <activity android:name=".ProPlayerEntry" />
+        <activity android:name=".ProMatchActivity" />
+        <activity android:name=".ProLiveActivity" />
+        <activity android:name=".AmaMainActivity" />
+        <activity android:name=".ProMainActivity" />
+        <activity android:name=".ShowMyRecordActivity" />
+        <activity android:name=".InsertActivity" />
+        <activity android:name=".MyrecordActivity" />
+        <activity android:name=".RecordActivity" />
+        <activity android:name=".NewsActivity" />
+        <activity android:name=".KboActivity" />
+        <activity android:name=".SerchActivity" />
+        <activity android:name=".AbprActivity"></activity>
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

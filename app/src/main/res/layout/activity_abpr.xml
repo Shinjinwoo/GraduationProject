@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rect_stroke"
+        android:padding="@dimen/x_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이닝"
+            android:textColor="#000000"
+            android:textSize="@dimen/y_40"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_stage"
+            android:layout_width="@dimen/x_100"
+            android:layout_height="@dimen/x_100"
+            android:layout_marginTop="@dimen/y_10"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text=">1"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/y_46"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_center" />
+
+        <LinearLayout
+            android:id="@+id/layout_stage_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y_10"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/x_12"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_stage">
+
+            <Button
+                android:id="@+id/btn_stage_minus"
+                android:layout_width="@dimen/x_60"
+                android:layout_height="@dimen/x_60"
+                android:layout_marginRight="@dimen/x_5"
+                android:background="@drawable/minus" />
+
+            <Button
+                android:id="@+id/btn_stage_plus"
+                android:layout_width="@dimen/x_60"
+                android:layout_height="@dimen/x_60"
+                android:layout_marginLeft="@dimen/x_5"
+                android:background="@drawable/plus" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_team_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_stroke"
+            android:padding="@dimen/x_10"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/layout_stage_select"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_left_team"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y_60"
+                android:layout_marginTop="@dimen/y_6"
+                android:background="@drawable/round_rect_stroke"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="team A"
+                android:textColor="#000000"
+                android:textSize="@dimen/y_35"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_left_team_plus"
+                android:layout_width="@dimen/x_70"
+                android:layout_height="@dimen/x_70"
+                android:layout_marginTop="@dimen/y_12"
+                android:background="@drawable/plus"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_left_team" />
+
+            <Button
+                android:id="@+id/btn_left_team_minus"
+                android:layout_width="@dimen/x_70"
+                android:layout_height="@dimen/x_70"
+                android:layout_marginTop="@dimen/y_6"
+                android:background="@drawable/minus"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_left_team_plus" />
+
+            <TextView
+                android:id="@+id/tv_left_score"
+                android:layout_width="@dimen/x_130"
+                android:layout_height="@dimen/x_130"
+                android:background="@drawable/circle_outline"
+                android:gravity="center"
+                android:text="22"
+                android:textColor="#000000"
+                android:textSize="@dimen/y_60"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/btn_left_team_plus"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_left_team" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_team_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rect_stroke"
+            android:padding="@dimen/x_10"
+            app:layout_constraintLeft_toRightOf="@+id/layout_stage_select"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_right_team"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/y_60"
+                android:layout_marginTop="@dimen/y_6"
+                android:background="@drawable/round_rect_stroke"
+                android:gravity="center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="team B"
+                android:textColor="#000000"
+                android:textSize="@dimen/y_35"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn_right_team_plus"
+                android:layout_width="@dimen/x_70"
+                android:layout_height="@dimen/x_70"
+                android:layout_marginTop="@dimen/y_12"
+                android:background="@drawable/plus"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_right_team" />
+
+            <Button
+                android:id="@+id/btn_right_team_minus"
+                android:layout_width="@dimen/x_70"
+                android:layout_height="@dimen/x_70"
+                android:layout_marginTop="@dimen/y_6"
+                android:background="@drawable/minus"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_right_team_plus" />
+
+            <TextView
+                android:id="@+id/tv_right_score"
+                android:layout_width="@dimen/x_130"
+                android:layout_height="@dimen/x_130"
+                android:background="@drawable/circle_outline"
+                android:gravity="center"
+                android:text="22"
+                android:textColor="#000000"
+                android:textSize="@dimen/y_60"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/btn_right_team_minus"
+                app:layout_constraintTop_toBottomOf="@+id/tv_right_team" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y_20"
+        android:background="@drawable/round_rect_stroke"
+        android:padding="@dimen/x_16"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_top">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_s_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_s_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="S"
+                android:textColor="#FFA500"
+                android:textSize="@dimen/y_120"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_s_select1"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_40"
+                android:background="@drawable/circle_outline_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_s_select"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_s_select2"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_30"
+                android:background="@drawable/circle_outline_yellow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_s_select1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_s_plus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginBottom="@dimen/y_5"
+                    android:background="@drawable/plus" />
+
+                <Button
+                    android:id="@+id/btn_s_minus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginTop="@dimen/y_5"
+                    android:background="@drawable/minus" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_b_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y_30"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_s_select">
+
+            <TextView
+                android:id="@+id/tv_b_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B"
+                android:textColor="#A6D785"
+                android:textSize="@dimen/y_120"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_b_select1"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_40"
+                android:background="@drawable/circle_outline_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_b_select"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_b_select2"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_30"
+                android:background="@drawable/circle_outline_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_b_select1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_b_select3"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_30"
+                android:background="@drawable/circle_outline_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_b_select2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_b_plus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginBottom="@dimen/y_5"
+                    android:background="@drawable/plus" />
+
+                <Button
+                    android:id="@+id/btn_b_minus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginTop="@dimen/y_5"
+                    android:background="@drawable/minus" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_o_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y_30"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_b_select">
+
+            <TextView
+                android:id="@+id/tv_o_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O"
+                android:textColor="#E04006"
+                android:textSize="@dimen/y_120"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_o_select1"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_40"
+                android:background="@drawable/circle_outline_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/tv_o_select"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_o_select2"
+                android:layout_width="@dimen/x_100"
+                android:layout_height="@dimen/x_100"
+                android:layout_marginLeft="@dimen/x_30"
+                android:background="@drawable/circle_outline_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/view_o_select1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_o_plus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginBottom="@dimen/y_5"
+                    android:background="@drawable/plus" />
+
+                <Button
+                    android:id="@+id/btn_o_minus"
+                    android:layout_width="@dimen/x_70"
+                    android:layout_height="@dimen/x_70"
+                    android:layout_marginTop="@dimen/y_5"
+                    android:background="@drawable/minus" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/bt_rm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="#2196F3"
+        android:text="메인메뉴"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
